@@ -1,6 +1,7 @@
 //  함수
 //  입력 -> 함수 -> 로직 -> 출력
 //  코드의 집합을 다른 곳에서 재사용
+
 //  함수 선언문
 function sum(a , b) {
     return a + b;
@@ -19,6 +20,8 @@ const asum = function (a, b) {
 console.log(typeof asum, asum(10, 20));
 
 // Functional Programming ( 함수형 프로그래밍)
+
+//  매개변수의 이해
 console.log("============== 매개변수")
 // 매개변수 선언과 별도로 전달된 모든 매개변수가 
 // arguments라는 함수 내장 매개변수로 전달

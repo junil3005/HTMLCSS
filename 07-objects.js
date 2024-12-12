@@ -8,24 +8,25 @@ person.age = 28;
 // 동적으로 메서드 추가
 person.showInfo = function() {
     //  this : 현재 인스턴스 자체
-    let = message = 'Name: ${this.name}, Age: ${this.age}';
+    let = message = 
+    'Name: ${this.name}, Age: ${this.age}';
     console.log(message);
 }
 console.log(person);
 person.showInfo();
 
- 객체 생성 방법 2: JSON(JavaScript Object Notation)
-person = {
-    // console.log("=========== JSON");
-    // const person2 = {
+ // 객체 생성 방법 2: JSON(JavaScript Object Notation)
+    console.log("=========== JSON");
+    const person2 = {
         //  키 : 값
         name: "홍길동",
         age : 28,
         showInfo: function() {
-            console.log('Name: ${this.name}, Age: ${this.age}')
+            console.log(
+                'Name: ${this.name}, Age: ${this.age}')
         }
     }
-} 
+
 console.log(person2);
 
 console.log(person2.name);  //  속성 접근
@@ -43,6 +44,7 @@ const Member = function(name, position) {
 
 let m1 = new Member("강백호", "PF");
 let m2 = new Member("서태웅", "SF");
+
 console.log("m1:", m1);
 console.log("m2:", m2);
 
@@ -65,19 +67,21 @@ console.log("m2의 constructor:", m1.constructor);
 //  -> prototype
 
 Member.prototype.introduce = function() {
-    console.log('안녕, 나는 ${this.name}')
+    console.log('안녕, 나는 ${this.name}이야!')
 }
-
-console.log(Mme)
-
+console.log(Member.prototype);
 
 m1.introduce();
 m2.introduce();
 
-
-
-
+//  원래 있던 기존 객체들에도 동적으로 속성과 메서드를
+//  추가할 수 있다.
+console.log(String.prototype);
 String.prototype.sayHello = function() {
     return 'Hello', + this;
 };
-console.log("둘리". )
+console.log("둘리".sayHello());
+
+//  TODO: this binding
+//  자바스크립트의 this는 실행 상황에 따라
+//  가리키는 객체가 다름

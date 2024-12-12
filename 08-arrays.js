@@ -1,7 +1,7 @@
 //  배열
 //  생성 1. Array 객체 이용
 const v1 = new Array(10);   //  10개짜리 빈 배열
-const v2 = new Array(); //  빈 배열
+const v2 = new Array();     //  빈 배열
 const v3 = new Array(1, "ABC",  true);  // 초기화 배열
 console.log(v1, v1.length);
 console.log(v2, v2.length);
@@ -16,7 +16,7 @@ console.log(typeof v4, typeof colors);
 //  특정 객체가 Array인지 확인
 console.log(Array.isArray(v4), Array.isArray(colors));
 
-//  기본 값으로 채우기
+//  기본 값으로 채우기: .fill
 const v5 = new Array(10).fill(1);
 console.log(v5);
 v5.fill("a");
@@ -65,7 +65,7 @@ console.log(fruits.shift());    //  Orange
 
 console.log(fruits);    //  ['Mango', 'kiwi']
 
- splice
+ // splice
 fruits = [ 'Apple', 'Banana', 'Orange', 'Mango', 'Kiwi'];
 console.log(fruits);
 //  매개변수가 1개: 해당 인덱스부터 끝까지 추출 후 제거
@@ -96,18 +96,20 @@ console.log("SLICE:", slice);
 
 console.log("---------------- sort");   //  정렬
 console.log(fruits);
+
+//  fruits.sort();  //  기본은 오름차순
+//  console.log("sort:", fruits);
 /*
- fruits.sort();  //  기본은 오름차순
- console.log("sort:", fruits);
  fruits.sort((v1, v2) => {
 // 역순 정렬    
- 0이면 순서가 같다 (변경없음)
- 0보다 작을 때 => v1이 앞으로
- 0보다 클 때 => v2가 앞으로
+// 0이면 순서가 같다 (변경없음)
+// 0보다 작을 때 => v1이 앞으로
+// 0보다 클 때 => v2가 앞으로
      if ( v1 < v2 ) return 1;
      if ( v1 > v2 ) return -1;
      if (v1 == v2 ) return 0; 
  });
+ */
 /* 문자열 길이 순으로 정렬 */
 fruits.sort((v1, v2) => {
     return v1.length - v2.length;
@@ -121,6 +123,10 @@ const str = "JavaScript is something strange than other languages";
 console.log(str);
 let chunks = str.split(' ');    //  공백 문자를 기준으로 분리
 console.log(chunks);
+
+for (let i = 0; i < chunks.length; i++) {
+    console.log(chunks[i]);
+}
 
 
 

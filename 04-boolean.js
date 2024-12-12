@@ -4,7 +4,7 @@ let v2 = null;
 
 // undefined : 자바스크립트 엔진이 할당하는 값
 // null : 개발자가 직접 할당하는 값
-console.log(v1,v2);
+console.log(v1, v2);
 console.log(v1 == v2); // == : 값의 형태만 비교
 console.log(v1, typeof v1, v1 == undefined);
 console.log(v2, typeof v2, v2 == null);
